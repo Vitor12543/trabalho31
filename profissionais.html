@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Pulse Marketing Ltda.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #FF6600; /* Fundo laranja */
+            color: #333;
+            padding-top: 56px; /* Espaço para a navbar fixa */
+        }
+        .navbar {
+            background-color: #007BFF; /* Cor principal da barra de navegação */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; /* Cor branca para o texto */
+        }
+        .index-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            padding: 0 20px; /* Espaçamento lateral */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+        }
+        .balloon {
+            background-color: #007BFF; /* Cor do balão */
+            color: #fff;
+            padding: 20px 40px; /* Mais largura */
+            border-radius: 15px; /* Bordas arredondadas do balão */
+            max-width: 100%; /* Largura máxima do balão se ajusta ao tamanho da tela */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do balão */
+            position: relative; /* Para o posicionamento da "ponta" do balão */
+            margin: 0 auto; /* Centraliza o balão */
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -20px; /* Ajuste a posição vertical da ponta */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px;
+            border-style: solid;
+            border-color: #007BFF transparent transparent transparent; /* Triângulo da ponta do balão */
+        }
+        .balloon-text {
+            font-size: 1rem; /* Tamanho da fonte ajustado para responsividade */
+            margin: 0; /* Remove margens padrão do parágrafo */
+        }
+        .profile-img {
+            width: 100%; /* Imagem ajusta a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 10px; /* Bordas arredondadas do retângulo */
+            object-fit: cover; /* Garante que a imagem se ajuste bem dentro do tamanho */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        .bg-custom {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.png" alt="Creative Pulse Marketing" style="height: 80px; margin-right: 10px;">
+            <span style="font-size: 1.25rem; line-height: 1;">Creative Pulse Marketing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#orcamentoModal">Orçamento</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center">Nossos Profissionais</h1>
+
+        <!-- Ana Silva -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="Ana Silva.jpeg" class="img-fluid profile-img" alt="Ana Silva">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <h3>Ana Silva</h3>
+                    <p class="balloon-text">Diretora Criativa<br>Ana é a força por trás da visão criativa da Creative Pulse. Com um MBA em Design Gráfico e mais de dez anos de experiência em branding e campanhas visuais, ela é especialista em transformar conceitos em identidades visuais impactantes. Ana é conhecida por sua capacidade de inovar e criar designs que capturam a essência das marcas, ajudando nossos clientes a se destacarem no mercado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pedro Costa -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="pedro.jpeg" class="img-fluid profile-img" alt="Pedro Costa">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <h3>Pedro Costa</h3>
+                    <p class="balloon-text">Estrategista Digital<br>Pedro é o estrategista por trás das campanhas digitais bem-sucedidas da agência. Com mais de quinze anos de experiência em marketing digital e certificações em Google Analytics e Google Ads, ele desenvolve estratégias baseadas em dados para otimizar campanhas e maximizar resultados. Pedro é um especialista em SEO e análise de desempenho, garantindo que nossos clientes alcancem seus objetivos digitais de forma eficiente e eficaz.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Juliana Almeida -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="Juliana.jpeg" class="img-fluid profile-img" alt="Juliana Almeida">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <h3>Juliana Almeida</h3>
+                    <p class="balloon-text">Gerente de Mídias Sociais<br>Juliana é responsável por gerenciar e otimizar a presença online de nossos clientes nas diversas plataformas de mídia social. Com uma sólida formação em Comunicação Social e certificações em Facebook Blueprint e HubSpot Social Media, ela utiliza suas habilidades para criar estratégias de conteúdo envolventes e interativas. Juliana tem uma vasta experiência em construir comunidades digitais e engajar audiências, ajudando as marcas a fortalecerem sua presença online e a interagir de forma significativa com seus públicos-alvo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Contatos com Mapa -->
+    <div class="container my-5">
+        <div class="balloon">
+            <h1 class="text-center">Localização Creative Pulse Marketing</h1>
+            <div class="row">
+                <!-- Informações de Contato -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <p><strong>Endereço:</strong> Rua Nicacio Portella Diniz 533 D, Bairro Saic, Chapecó - SC</p>
+                    <p><strong>CEP:</strong> 89802185</p>
+                </div>
+                <!-- Mapa -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7207.779597154488!2d-52.62140038330159!3d-27.10825109185206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b418561b6e13%3A0x37a25a3f3fb92420!2sRua%20Nicácio%20Portela%20Diniz%2C%20533%20D%2C%20Bairro%20Saic%2C%20Chapecó%20-%20SC%2C%2089802-185!5e0!3m2!1spt-BR!2sbr!4v1693778256397!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Footer -->
+    <footer class="bg-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Seção sobre a empresa -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre a Creative Pulse Marketing</h5>
+                    <p>A Creative Pulse Marketing Ltda. oferece uma gama completa de serviços de marketing e propaganda, projetados para atender às necessidades específicas de cada cliente e impulsionar seus resultados. Com uma abordagem personalizada e inovadora, trabalhamos para transformar as metas de nossos clientes em conquistas tangíveis.</p>
+                </div>
+
+                <!-- Seção de contato -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p><strong>Endereço:</strong> Rua Nicacio Portella Diniz 533 D, Saic, Chapecó - SC</p>
+                    <p><strong>Telefone:</strong> (49) 99187-9409</p>
+                    <p><strong>E-mail:</strong> contato@creativepulsemarketing.com.br</p>
+                    <p><strong>CEP:</strong> 89802185</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5549998004851" target="_blank" class="text-white">Inicie uma conversa</a></p>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>&copy; © 2024 Creative Pulse Marketing Ltda. Todos os direitos reservados. Desenvolvedor Vitor Matheus Baggeio.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

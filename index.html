@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Pulse Marketing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #007BFF; /* Fundo azul */
+            color: #fff;
+            padding-top: 56px; /* Espaço para a navbar fixa */
+        }
+        .navbar {
+            background-color: #FF6600; /* Cor principal da barra de navegação */
+        }
+        .navbar-brand, .nav-link {
+            color: black !important; /* Cor branca para o texto */
+        }
+        .index-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            padding: 0 20px; /* Espaçamento lateral */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+            text-align: center;
+        }
+        .index-logo img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .balloon {
+            background-color: #FF6600; /* Cor do balão */
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px; /* Bordas arredondadas do balão */
+            max-width: 600px; /* Largura máxima do balão */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do balão */
+            position: relative; /* Para o posicionamento da "ponta" do balão */
+            margin-bottom: 40px; /* Espaço entre o balão e o rodapé */
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -20px; /* Ajuste a posição vertical da ponta */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px;
+            border-style: solid;
+            border-color: #FF6600 transparent transparent transparent; /* Triângulo da ponta do balão */
+        }
+        .balloon-text {
+            font-size: 1.25rem; /* Tamanho da fonte ajustado */
+            margin: 0; /* Remove margens padrão do parágrafo */
+        }
+        .bg-custom {
+            background-color: #007BFF;
+        }
+        .modal-header {
+            background-color: #fff; 
+            color: black; 
+            padding: 10px;
+        }
+        /* Estilo para o carrossel */
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .carousel-caption h5 {
+            font-size: 1.5rem; /* Tamanho da fonte ajustado para dispositivos maiores */
+        }
+        @media (max-width: 768px) {
+            .carousel-caption h5 {
+                font-size: 1.25rem; /* Tamanho da fonte ajustado para dispositivos menores */
+            }
+        }
+        @media (max-width: 576px) {
+            .carousel-caption h5 {
+                font-size: 1rem; /* Tamanho da fonte ainda menor para telas muito pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo com texto ao lado -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <!-- Logo -->
+            <img src="logo.png" alt="Creative Pulse Marketing" style="height: 80px; margin-right: 10px;">
+            <span style="font-size: 1.25rem; line-height: 1;">Creative Pulse Marketing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#orcamentoModal">Orçamento</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção do Texto Dentro do Balão -->
+    <div class="index-container">
+        <div class="index-logo">
+            <img src="logo.png" alt="Logo Creative Pulse Marketing">
+        </div>
+        <div class="balloon">
+            <h1 class="balloon-text">Bem-vindo à Creative Pulse Marketing</h1>
+            <p class="balloon-text">A Creative Pulse Marketing foi fundada com o objetivo de promover a inovação e a criatividade no marketing. Hoje somos uma referência no mercado...</p>
+        </div>
+    </div>
+
+    <!-- Carrossel de Serviços -->
+    <div id="servicesCarousel" class="carousel slide my-5" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#servicesCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#servicesCarousel" data-slide-to="1"></li>
+            <li data-target="#servicesCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="servicos.html">
+                    <img src="marketing 3.jpeg" class="d-block w-100" alt="Serviço 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Desenvolvimento de Identidade Visual</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="servicos.html">
+                    <img src="marketing 2.jpeg" class="d-block w-100" alt="Serviço 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Gestão de Campanhas de Marketing Digital</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="servicos.html">
+                    <img src="marketing 1.jpeg" class="d-block w-100" alt="Serviço 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Estratégias de Mídias Sociais</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+  
+    <!-- Modal de Orçamento -->
+    <div class="modal fade" id="orcamentoModal" tabindex="-1" role="dialog" aria-labelledby="orcamentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orcamentoModalLabel">Solicitar Orçamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Seu Endereço">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sua Cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" id="uf" placeholder="Sua UF">
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data desejada para a realização do serviço</label>
+                            <input type="date" class="form-control" id="data">
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea class="form-control" id="observacoes" rows="3" placeholder="Detalhe seu orçamento"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Seção sobre a empresa -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre a Creative Pulse Marketing</h5>
+                    <p>A Creative Pulse Marketing é dedicada a oferecer soluções de marketing digital que ajudam você a atingir seus objetivos de negócio. Entre em contato conosco para saber mais sobre nossos serviços e equipe.</p>
+                </div>
+                <!-- Seção de contato -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p><strong>Endereço:</strong> Rua Nicacio Portella Diniz 533D, Bairro Saic, Chapecó – SC, CEP: 89802-185</p>
+                    <p><strong>Telefone:</strong> (49) 99187-8409</p>
+                    <p><strong>E-mail:</strong> contato@creativepulsemarketing.com.br</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5549991878409" target="_blank" class="text-white">Inicie uma conversa</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Creative Pulse Marketing. Todos os direitos reservados. Desenvolvedor Vitor Matheus Baggeio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

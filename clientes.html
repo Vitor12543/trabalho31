@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Pulse Marketing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #F25835; /* Fundo laranja */
+            color: #333;
+            padding-top: 56px; /* Espaço para a navbar fixa */
+        }
+        .navbar {
+            background-color: #007BFF; /* Cor principal da barra de navegação */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; /* Cor branca para o texto */
+        }
+        .index-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            padding: 0 20px; /* Espaçamento lateral */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+        }
+        .balloon {
+            background-color: #007BFF; /* Cor do balão */
+            color: #fff;
+            padding: 20px 30px; /* Ajuste do padding para telas menores */
+            border-radius: 15px; /* Bordas arredondadas do balão */
+            max-width: 100%; /* Largura máxima do balão */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do balão */
+            position: relative; /* Para o posicionamento da "ponta" do balão */
+            margin: 0 auto; /* Centraliza o balão */
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -15px; /* Ajuste a posição vertical da ponta */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 15px;
+            border-style: solid;
+            border-color: #007BFF transparent transparent transparent; /* Triângulo da ponta do balão */
+        }
+        .balloon-text {
+            font-size: 18px; /* Tamanho da fonte ajustado */
+            margin: 0; /* Remove margens padrão do parágrafo */
+        }
+        .client-img {
+            width: 100%; /* Largura adaptável */
+            max-width: 150px; /* Largura máxima */
+            height: auto; /* Altura automática para manter a proporção */
+            object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+            border-radius: 50%; /* Bordas arredondadas para formato circular */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        .bg-custom {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo com texto ao lado -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.png" alt="Creative Pulse Marketing" style="height: 80px; margin-right: 10px;">
+            <span style="font-size: 1.25rem; line-height: 1;">Creative Pulse Marketing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#orcamentoModal">Orçamento</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center">Clientes e Depoimentos</h1>
+    
+        <!-- Cliente 1 -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="technova.jpg" class="img-fluid client-img" alt="TechNova">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <p class="balloon-text">"A Creative Pulse Marketing foi essencial para a nossa transformação. O rebranding e a campanha publicitária trouxeram um aumento de 30% na taxa de conversão e 50% no tráfego orgânico. A equipe é extremamente competente e focada em resultados!"</p>
+                    <p><strong>Mariana Silva</strong></p>
+                    <p>Diretora de Marketing da TechNova</p>
+                    <p>Data: 10/05/2024</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Cliente 2 -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="ecoverde.jpg" class="img-fluid client-img" alt="EcoVerde">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <p class="balloon-text">"A Creative Pulse Marketing superou nossas expectativas com sua abordagem inovadora. A estratégia de marketing digital e a gestão de influenciadores aumentaram nosso engajamento em 40% e melhoraram a participação em nossos eventos eco-friendly em 25%."</p>
+                    <p><strong>João Almeida</strong></p>
+                    <p>CEO da EcoVerde</p>
+                    <p>Data: 02/07/2024</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Cliente 3 -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="GourmetDelights.jpg" class="img-fluid client-img" alt="Gourmet Delights">
+            </div>
+            <div class="col-md-8">
+                <div class="balloon">
+                    <p class="balloon-text">"Colaborar com a Creative Pulse Marketing foi uma experiência excepcional. O design do nosso novo site e a campanha de marketing local resultaram em um aumento de 35% nas vendas online e uma expansão de 20% na base de clientes locais. Estamos muito satisfeitos com o trabalho e os resultados obtidos."</p>
+                    <p><strong>Ana Costa</strong></p>
+                    <p>Proprietária da Gourmet Delights</p>
+                    <p>Data: 18/08/2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal de Orçamento -->
+    <div class="modal fade" id="orcamentoModal" tabindex="-1" role="dialog" aria-labelledby="orcamentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orcamentoModalLabel">Solicitar Orçamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Seu Endereço">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sua Cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" id="uf" placeholder="Sua UF">
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data desejada para a realização do serviço</label>
+                            <input type="date" class="form-control" id="data">
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea class="form-control" id="observacoes" rows="3" placeholder="Detalhe seu orçamento"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="bg-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Seção sobre a empresa -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre a Creative Pulse Marketing</h5>
+                    <p>A Creative Pulse Marketing é dedicada a oferecer soluções de marketing inovadoras e eficazes para ajudar você a atingir seus objetivos de negócios. Entre em contato conosco para saber mais sobre nossos serviços e equipe.</p>
+                </div>
+    
+                <!-- Seção de contato -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p><strong>Endereço:</strong> Rua Nicacio Portella Diniz 533D, Bairro Saic, Chapecó – SC, CEP:89802185</p>
+                    <p><strong>Telefone:</strong> (49) 99187-8409</p>
+                    <p><strong>E-mail:</strong> contato@creativepulsemarketing.com.br</p>
+                    <p><strong>CEP:</strong> 89802-185</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5549991878409" target="_blank" class="text-white">Inicie uma conversa</a></p>
+                </div>
+    
+            </div>
+    
+            <div class="text-center mt-4">
+                <p>&copy; © 2024 Creative Pulse Marketing. Todos os direitos reservados. Desenvolvedor Vitor Matheus Baggeio.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Pulse Marketing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #FF6600; /* Fundo laranja */
+            color: #333;
+            padding-top: 56px; /* Espaço para a navbar fixa */
+        }
+        .navbar {
+            background-color: #007BFF; /* Cor principal da barra de navegação */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; /* Cor branca para o texto */
+        }
+        .index-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ocupa 100% da altura da tela */
+            padding: 0 20px; /* Espaçamento lateral */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+        }
+        .balloon {
+            background-color: #FF6600; /* Cor do balão */
+            color: #fff;
+            padding: 20px 40px; /* Mais largura */
+            border-radius: 15px; /* Bordas arredondadas do balão */
+            max-width: 600px; /* Largura máxima do balão */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do balão */
+            position: relative; /* Para o posicionamento da "ponta" do balão */
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -20px; /* Ajuste a posição vertical da ponta */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px;
+            border-style: solid;
+            border-color: #FF6600 transparent transparent transparent; /* Triângulo da ponta do balão */
+        }
+        .balloon-text {
+            font-size: 24px; /* Tamanho da fonte */
+            margin: 0; /* Remove margens padrão do parágrafo */
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .bg-custom {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo com texto ao lado -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.png" alt="Creative Pulse Marketing" style="height: 80px; margin-right: 10px;">
+            <span style="font-size: 1.25rem; line-height: 1;">Creative Pulse Marketing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#orcamentoModal">Orçamento</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container my-5">
+        <h1 class="text-center">Blog</h1>
+    
+        <!-- Publicação 1 -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 col-md-10 col-12 text-center">
+                <h3>Como o Rebranding Pode Transformar Sua Empresa: Dicas para um Processo Bem-Sucedido</h3>
+                <p>O rebranding é uma estratégia essencial para empresas que buscam revitalizar sua imagem e se destacar no mercado. No entanto, esse processo deve ser cuidadosamente planejado e executado para garantir o sucesso. Aqui estão algumas dicas para um rebranding eficaz:</p>
+                <ul>
+                    <li><strong>Entenda o Motivo do Rebranding:</strong> Antes de iniciar, é crucial compreender por que o rebranding é necessário. Seja para atualizar a imagem da empresa ou para alcançar um novo público-alvo, definir claramente os objetivos ajudará a direcionar o processo.</li>
+                    <li><strong>Pesquise Seu Público-Alvo:</strong> Compreender as necessidades e preferências do seu público é fundamental. Realize pesquisas e colete feedback para garantir que o novo branding ressoe com seus clientes.</li>
+                    <li><strong>Desenvolva uma Identidade Visual Coerente:</strong> A identidade visual deve refletir a nova direção da marca. Inclua elementos como logotipo, paleta de cores e tipografia que transmitam a mensagem desejada.</li>
+                    <li><strong>Comunique a Mudança de Forma Eficaz:</strong> Planeje uma estratégia de comunicação para informar seus clientes e parceiros sobre a mudança. Utilize canais como redes sociais, e-mails e seu site para explicar o motivo e os benefícios do rebranding.</li>
+                    <li><strong>Acompanhe e Avalie os Resultados:</strong> Após a implementação, monitore o impacto do rebranding nas métricas de desempenho da empresa. Ajustes podem ser necessários para otimizar os resultados.</li>
+                </ul>
+                <p>O rebranding pode ser um divisor de águas para sua empresa, trazendo novas oportunidades e revitalizando sua presença no mercado. Se precisar de ajuda para transformar sua marca, a Creative Pulse Marketing está aqui para ajudar!</p>
+                <p><strong>Nome do Autor:</strong> Carla Santos, Especialista em Branding</p>
+                <p><strong>Data e Hora:</strong> 15 de agosto de 2024, 10:00 AM</p>
+                <p><strong>Fonte:</strong> <a href="https://blog.somostera.com/marketing-digital/rebranding#:~:text=Rebranding%2C%20ou%20reposicionamento%20de%20marca,ao%20público%20e%20ao%20mercado." target="_blank">Mais informações sobre rebranding</a></p>
+            </div>
+        </div>
+    
+        <!-- Publicação 2 -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 col-md-10 col-12 text-center">
+                <h3>5 Estratégias de Marketing Digital para Aumentar o Engajamento nas Redes Sociais</h3>
+                <p>O engajamento nas redes sociais é crucial para o sucesso das campanhas de marketing digital. Aqui estão cinco estratégias comprovadas para aumentar o engajamento e conectar-se melhor com seu público:</p>
+                <ul>
+                    <li><strong>Crie Conteúdo Relevante e Valioso:</strong> Produza conteúdo que resolva problemas ou responda perguntas frequentes do seu público. Isso mantém sua audiência interessada e engajada.</li>
+                    <li><strong>Use Vídeos e Imagens Atrativas:</strong> O conteúdo visual tende a gerar mais engajamento do que texto puro. Utilize vídeos, infográficos e imagens de alta qualidade para captar a atenção dos seus seguidores.</li>
+                    <li><strong>Interaja com Seus Seguidores:</strong> Responda a comentários, mensagens e menções de forma rápida e pessoal. Mostrar que você valoriza a opinião dos seus seguidores pode aumentar significativamente o engajamento.</li>
+                    <li><strong>Realize Sorteios e Promoções:</strong> Ofereça incentivos para que os usuários interajam com sua página. Sorteios e promoções são ótimas maneiras de aumentar o engajamento e atrair novos seguidores.</li>
+                    <li><strong>Analise e Ajuste Suas Estratégias:</strong> Utilize ferramentas de análise para monitorar o desempenho das suas postagens. Com base nos dados, ajuste suas estratégias para melhorar continuamente o engajamento.</li>
+                </ul>
+                <p>Adotar essas estratégias ajudará a construir uma presença forte e envolvente nas redes sociais. Na Creative Pulse Marketing, podemos ajudar você a implementar e otimizar suas campanhas para alcançar melhores resultados.</p>
+                <p><strong>Nome do Autor:</strong> Lucas Pereira, Especialista em Marketing Digital</p>
+                <p><strong>Data e Hora:</strong> 22 de agosto de 2024, 2:00 PM</p>
+                <p><strong>Fonte:</strong> <a href="https://pt.semrush.com/blog/marketing-digital/?kw=&cmp=BR_POR_SRCH_DSA_Blog_PT&label=dsa_pagefeed&Network=g&Device=c&utm_content=678287389888&kwid=dsa-2227432791347&cmpid=19241772885&agpid=158827185790&BU=Core&extid=109814358126&adpos=&gad_source=1&gclid=CjwKCAjwodC2BhAHEiwAE67hJA2oWc9zm0BjXW3X87tmXaFBSQI65FutGYNH1Hme3XAZDnn6LQC7iBoCdU4QAvD_BwE" target="_blank">Mais informações sobre estratégias de marketing digital</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Orçamento -->
+    <div class="modal fade" id="orcamentoModal" tabindex="-1" role="dialog" aria-labelledby="orcamentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orcamentoModalLabel">Solicitar Orçamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Seu Endereço">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sua Cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" id="uf" placeholder="Sua UF">
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data desejada para a realização do serviço</label>
+                            <input type="date" class="form-control" id="data">
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea class="form-control" id="observacoes" rows="3" placeholder="Detalhe seu orçamento"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="bg-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Seção sobre a empresa -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre a Creative Pulse Marketing</h5>
+                    <p>A Creative Pulse Marketing é dedicada a oferecer soluções de marketing digital que ajudam você a atingir seus objetivos de negócio. Entre em contato conosco para saber mais sobre nossos serviços e equipe.</p>
+                </div>
+    
+                <!-- Seção de contato -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p><strong>Endereço:</strong> Rua Nicacio Portella Diniz 533D, Bairro Saic, Chapecó – SC, CEP: 89802-185</p>
+                    <p><strong>Telefone:</strong> (49) 99187-8409</p>
+                    <p><strong>E-mail:</strong> contato@creativepulsemarketing.com.br</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5549991878409" target="_blank" class="text-white">Inicie uma conversa</a></p>
+                </div>
+    
+            </div>
+    
+            <div class="text-center mt-4">
+                <p>&copy; © 2024 Creative Pulse Marketing. Todos os direitos reservados. Desenvolvedor Vitor Matheus Baggeio.</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

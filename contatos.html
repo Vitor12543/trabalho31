@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Pulse Marketing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+            margin: 0; /* Remove margens padrão */
+            padding: 0; /* Remove padding padrão */
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            background-color: #FF6600; /* Fundo laranja */
+            color: #333;
+        }
+        .navbar {
+            background-color: #007BFF; /* Cor principal da barra de navegação */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; /* Cor branca para o texto */
+        }
+        .balloon {
+            background-color: #007BFF; /* Cor do balão */
+            color: #fff;
+            padding: 20px 30px; /* Mais largura */
+            border-radius: 15px; /* Bordas arredondadas do balão */
+            max-width: 100%; /* Largura máxima do balão se ajusta ao tamanho da tela */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do balão */
+            position: relative; /* Para o posicionamento da "ponta" do balão */
+            margin: 0 auto; /* Centraliza o balão */
+            width: 90%; /* Ajuste a largura do balão */
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -20px; /* Ajuste a posição vertical da ponta */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px;
+            border-style: solid;
+            border-color: #007BFF transparent transparent transparent; /* Triângulo da ponta do balão */
+        }
+        .balloon-text {
+            font-size: 1rem; /* Tamanho da fonte ajustado para responsividade */
+            margin: 0; /* Remove margens padrão do parágrafo */
+        }
+        .contact-form-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            margin-top: 80px; /* Espaçamento superior para garantir que o conteúdo não fique coberto pela barra de navegação */
+            margin-bottom: 20px; /* Espaço entre o formulário e o rodapé */
+        }
+        @media (max-width: 768px) {
+            .balloon {
+                padding: 15px 20px; /* Ajusta o padding para telas menores */
+                width: 100%; /* Faz o balão ocupar a largura completa da tela em dispositivos móveis */
+                max-width: 90%; /* Ajusta a largura máxima */
+            }
+            .balloon::after {
+                bottom: -15px; /* Ajusta a posição vertical da ponta em dispositivos móveis */
+            }
+            .contact-form-container {
+                padding: 10px; /* Reduz o padding para telas menores */
+                margin-top: 90px; /* Ajusta o espaço superior em dispositivos móveis */
+                margin-bottom: 40px; /* Ajusta o espaço inferior para telas menores */
+            }
+        }
+        @media (max-width: 576px) {
+            .balloon {
+                font-size: 0.9rem; /* Ajusta o tamanho da fonte para dispositivos muito pequenos */
+                padding: 10px 15px; /* Ajusta o padding para telas menores */
+            }
+            .balloon::after {
+                bottom: -10px; /* Ajusta a posição vertical da ponta para telas muito pequenas */
+                border-width: 15px; /* Ajusta o tamanho da ponta */
+            }
+        }
+        .profile-img {
+            width: 100%; /* Imagem ajusta a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 10px; /* Bordas arredondadas do retângulo */
+            object-fit: cover; /* Garante que a imagem se ajuste bem dentro do tamanho */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        .bg-custom {
+            background-color: #007BFF;
+        }
+        footer {
+            background-color: #007BFF; /* Cor de fundo do rodapé */
+            color: #fff;
+            padding: 20px; /* Espaçamento interno do rodapé */
+            text-align: center; /* Alinhamento centralizado do texto */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Logo com texto ao lado -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="logo.png" alt="Creative Pulse Marketing" style="height: 80px; margin-right: 10px;">
+            <span style="font-size: 1.25rem; line-height: 1;">Creative Pulse Marketing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#orcamentoModal">Orçamento</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatos.html">Contatos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção de Contato Centralizada -->
+    <div class="contact-form-container">
+        <div class="balloon">
+            <h1>Formulário de Contato</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Seu E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" placeholder="Seu Endereço">
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Sua Cidade">
+                </div>
+                <div class="form-group">
+                    <label for="uf">UF</label>
+                    <input type="text" class="form-control" id="uf" placeholder="Sua UF">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data desejada para a realização do serviço</label>
+                    <input type="date" class="form-control" id="data">
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea class="form-control" id="observacoes" rows="3" placeholder="Detalhe seu orçamento"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Orçamento -->
+    <div class="modal fade" id="orcamentoModal" tabindex="-1" role="dialog" aria-labelledby="orcamentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orcamentoModalLabel">Solicitar Orçamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Seu Endereço">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sua Cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="uf">UF</label>
+                            <input type="text" class="form-control" id="uf" placeholder="Sua UF">
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data desejada para a realização do serviço</label>
+                            <input type="date" class="form-control" id="data">
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea class="form-control" id="observacoes" rows="3" placeholder="Detalhe seu orçamento"></textarea>
+                        </div>
+                        <p>Preencha o formulário para solicitar um orçamento personalizado. Entraremos em contato o mais breve possível.</p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Razão Social: Creative Pulse Marketing Ltda.</p>
+        <p>Nome Fantasia: Pulse Marketing</p>
+        <p>Slogan: “Transformando Ideias em Resultados”</p>
+        <p>Endereço: Rua Nicacio Portella Diniz 533D, Bairro Saic, Chapecó – SC, CEP: 89802185</p>
+        <p>Telefone: (49) 99187-8409</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
